@@ -1,0 +1,13 @@
+# ===============================
+# = SPRING BOOT GENERAL
+# ===============================
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# ===============================
+# = APP CONFIGURATION
+# ===============================
+server:
+  port: 8082

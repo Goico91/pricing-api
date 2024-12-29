@@ -1,0 +1,32 @@
+# ===============================
+# = SPRING BOOT GENERAL
+# ===============================
+spring:
+  application:
+    name: @project.name@
+  profiles:
+    group:
+      local: local
+      dev: dev
+
+application:
+  description: @project.description@
+  version: @project.version@
+
+server:
+  servlet:
+    context-path: /pricing-api
+
+## --- LOGGING ---
+logging:
+  config: classpath:log4j2.xml
+
+# ===============================
+# = SPRING BOOT ACTUATOR
+# ===============================
+# Add all actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

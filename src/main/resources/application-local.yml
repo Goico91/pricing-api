@@ -1,0 +1,17 @@
+# ===============================
+# = SPRING BOOT GENERAL
+# ===============================
+spring:
+  config:
+    activate:
+      on-profile: local
+
+# ===============================
+# = APP CONFIGURATION
+# ===============================
+server:
+  port: 8081
+
+## --- LOGGING ---
+logging:
+  config: classpath:log4j2-local.xml

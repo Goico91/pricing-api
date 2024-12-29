@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30">
+    <Properties>
+        <Property name="LOG_LEVEL" value="${env:LOG_LEVEL:-ERROR}"/>
+        <Property name="BASE_DIR" value="log"/>
+
+        <Property name="LOG_PATTERN"
+                  value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+        <Property name="SIZE_FILE" value="50MB"/>
+        <Property name="MAX_FILES" value="10"/>
+        <Property name="DAYS_STORAGE" value="P30D"/>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!-- Rolling File Appender -->
+        <RollingFile name="file"
+                     fileName="${BASE_DIR}/pricing-api.log"
+                     filePattern="${BASE_DIR}/pricing-api-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="${SIZE_FILE}"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="${MAX_FILES}">
+                <!-- Delete old files logs older than 30 days in order to free storage space -->
+                <Delete basePath="${BASE_DIR}">
+                    <IfFileName glob="pricing-api-*.log.gz"/>
+                    <IfLastModified age="${DAYS_STORAGE}"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="${LOG_LEVEL}">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="file"/>
+        </Root>
+    </Loggers>
+</Configuration>
