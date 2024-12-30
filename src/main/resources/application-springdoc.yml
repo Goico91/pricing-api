@@ -1,0 +1,9 @@
+# ===============================
+# = SPRING DOC CONFIG
+# ===============================
+springdoc:
+  swagger-ui:
+    enabled: true # Disabled Swagger-UI in order to not show in production environment
+    doc-expansion: none # Collapse all Request
+    operationsSorter: alpha #alpha or method
+    tagsSorter: alpha
