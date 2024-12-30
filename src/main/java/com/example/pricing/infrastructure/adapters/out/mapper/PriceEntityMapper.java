@@ -1,6 +1,6 @@
 package com.example.pricing.infrastructure.adapters.out.mapper;
 
-import com.example.pricing.domain.Price;
+import com.example.pricing.domain.model.Price;
 import com.example.pricing.infrastructure.adapters.out.model.PriceEntity;
 
 import java.util.List;

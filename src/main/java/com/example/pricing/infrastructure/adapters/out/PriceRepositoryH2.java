@@ -1,7 +1,7 @@
 package com.example.pricing.infrastructure.adapters.out;
 
 import com.example.pricing.application.ports.out.PriceRepository;
-import com.example.pricing.domain.Price;
+import com.example.pricing.domain.model.Price;
 import com.example.pricing.infrastructure.adapters.out.adapter.PriceDataJpaRepository;
 import com.example.pricing.infrastructure.adapters.out.mapper.PriceEntityMapper;
 import lombok.AllArgsConstructor;

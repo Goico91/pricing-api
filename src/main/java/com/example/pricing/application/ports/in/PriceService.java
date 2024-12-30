@@ -1,6 +1,6 @@
 package com.example.pricing.application.ports.in;
 
-import com.example.pricing.domain.Price;
+import com.example.pricing.domain.model.Price;
 
 import java.time.LocalDateTime;
 

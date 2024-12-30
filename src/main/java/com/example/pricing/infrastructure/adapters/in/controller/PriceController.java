@@ -1,7 +1,7 @@
 package com.example.pricing.infrastructure.adapters.in.controller;
 
 import com.example.pricing.application.ports.in.PriceService;
-import com.example.pricing.domain.Price;
+import com.example.pricing.domain.model.Price;
 import com.example.pricing.infrastructure.adapters.in.dto.PriceResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
