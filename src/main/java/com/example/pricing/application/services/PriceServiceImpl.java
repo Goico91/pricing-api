@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Comparator;
 
 @Service
 @AllArgsConstructor
@@ -18,12 +17,8 @@ public class PriceServiceImpl implements PriceService {
   @Override
   public Price getApplicablePrice(
       final Long productId, final Long brandId, final LocalDateTime applicationDate) {
-    return priceRepository.findPricesByProductAndBrand(productId, brandId).stream()
-        .filter(
-            price ->
-                applicationDate.isAfter(price.startDate())
-                    && applicationDate.isBefore(price.endDate()))
-        .max(Comparator.comparingInt(Price::priority))
+    return priceRepository.findApplicablePrices(productId, brandId, applicationDate).stream()
+        .findFirst()
         .orElse(null);
   }
 }

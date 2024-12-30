@@ -16,7 +16,7 @@ public class PriceController implements PriceApi {
   private PriceService priceService;
 
   @Override
-  public ResponseEntity<PriceResponse> getPrice(
+  public ResponseEntity<PriceResponse> getApplicablePrice(
       final Long productId, final Long brandId, final String applicationDate) {
     final LocalDateTime date = LocalDateTime.parse(applicationDate);
     final Price price = priceService.getApplicablePrice(productId, brandId, date);

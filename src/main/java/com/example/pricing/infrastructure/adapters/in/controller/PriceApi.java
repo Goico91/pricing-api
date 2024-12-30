@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface PriceApi {
 
   @GetMapping
-  ResponseEntity<PriceResponse> getPrice(
+  ResponseEntity<PriceResponse> getApplicablePrice(
       @RequestParam final Long productId,
       @RequestParam final Long brandId,
       @RequestParam final String applicationDate);
