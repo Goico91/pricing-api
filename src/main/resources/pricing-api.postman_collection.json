@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "c0dbd0f8-dfae-407c-a784-5bf85d4373ff",
+		"name": "Pricing API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1161350"
+	},
+	"item": [
+		{
+			"name": "Case 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId={{PRODUCT_ID}}&brandId={{BRAND_ID}}&applicationDate=2020-06-14T10:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{PRODUCT_ID}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T10:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId={{PRODUCT_ID}}&brandId={{BRAND_ID}}&applicationDate=2020-06-14T16:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{PRODUCT_ID}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T16:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId={{PRODUCT_ID}}&brandId={{BRAND_ID}}&applicationDate=2020-06-14T21:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{PRODUCT_ID}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-14T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId={{PRODUCT_ID}}&brandId={{BRAND_ID}}&applicationDate=2020-06-15T10:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{PRODUCT_ID}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-15T10:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId={{PRODUCT_ID}}&brandId={{BRAND_ID}}&applicationDate=2020-06-16T21:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "{{PRODUCT_ID}}"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}?productId=1&brandId={{BRAND_ID}}&applicationDate=2020-06-16T21:00:00",
+					"host": [
+						"{{HOST}}{{PORT}}{{API_PATH}}{{PRICE}}"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						},
+						{
+							"key": "brandId",
+							"value": "{{BRAND_ID}}"
+						},
+						{
+							"key": "applicationDate",
+							"value": "2020-06-16T21:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:",
+			"type": "string"
+		},
+		{
+			"key": "PORT",
+			"value": "8081",
+			"type": "string"
+		},
+		{
+			"key": "API_PATH",
+			"value": "/pricing-api",
+			"type": "string"
+		},
+		{
+			"key": "PRICE",
+			"value": "/v1/prices",
+			"type": "string"
+		},
+		{
+			"key": "PRODUCT_ID",
+			"value": "35455",
+			"type": "string"
+		},
+		{
+			"key": "BRAND_ID",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
