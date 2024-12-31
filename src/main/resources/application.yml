@@ -6,8 +6,19 @@ spring:
     name: @project.name@
   profiles:
     group:
-      local: local
-      dev: dev
+      local: local, springdoc
+      dev: dev, springdoc
+  datasource:
+    url: jdbc:h2:mem:pricingdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    h2:
+      console:
+        enabled: true
+    jpa:
+      hibernate:
+        ddl-auto: update
 
 application:
   description: @project.description@
@@ -30,3 +41,10 @@ management:
     web:
       exposure:
         include: "*"
+
+# ===============================
+# = SPRING DOC
+# ===============================
+springdoc:
+  swagger-ui:
+    enabled: false # Disabled Swagger-UI in order to not show in production environment
