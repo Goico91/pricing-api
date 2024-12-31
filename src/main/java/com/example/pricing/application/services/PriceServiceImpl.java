@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PriceServiceImpl implements PriceService {
 
-  private PriceRepository priceRepository;
+  private final PriceRepository priceRepository;
 
   @Override
   public Price getApplicablePrice(

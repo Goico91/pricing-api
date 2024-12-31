@@ -15,12 +15,11 @@ import java.util.List;
 public class PriceRepositoryH2 implements PriceRepository {
 
   private final PriceDataJpaRepository priceDataJpaRepository;
-  private final PriceEntityMapper priceEntityMapper;
 
   @Override
   public List<Price> findApplicablePrices(
       final Long productId, final Long brandId, final LocalDateTime applicationDate) {
-    return priceEntityMapper.toDomain(
+    return PriceEntityMapper.INSTANCE.toDomain(
         priceDataJpaRepository.findApplicablePrices(productId, brandId, applicationDate));
   }
 }

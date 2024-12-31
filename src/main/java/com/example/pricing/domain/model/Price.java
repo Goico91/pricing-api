@@ -1,7 +1,10 @@
 package com.example.pricing.domain.model;
 
+import lombok.Builder;
+
 import java.time.LocalDateTime;
 
+@Builder
 public record Price(
     Long priceId,
     Long brandId,

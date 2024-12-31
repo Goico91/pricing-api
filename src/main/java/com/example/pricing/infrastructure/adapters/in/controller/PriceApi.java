@@ -21,6 +21,7 @@ public interface PriceApi {
   @ApiResponses(
       value = {
         @ApiResponse(responseCode = "200", description = "Price to apply"),
+        @ApiResponse(responseCode = "400", description = "Bad Request", content = @Content),
         @ApiResponse(responseCode = "404", description = "Price Not Found", content = @Content)
       })
   @GetMapping
